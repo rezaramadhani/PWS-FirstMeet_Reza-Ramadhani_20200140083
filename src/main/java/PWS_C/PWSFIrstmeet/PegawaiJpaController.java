@@ -34,6 +34,10 @@ public class PegawaiJpaController implements Serializable {
         return emf.createEntityManager();
     }
 
+    public PegawaiJpaController() {
+    }
+    
+
     public void create(Pegawai pegawai) throws PreexistingEntityException, Exception {
         EntityManager em = null;
         try {
