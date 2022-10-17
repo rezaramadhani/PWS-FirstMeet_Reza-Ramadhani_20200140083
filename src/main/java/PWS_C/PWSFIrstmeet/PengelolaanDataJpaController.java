@@ -34,6 +34,10 @@ public class PengelolaanDataJpaController implements Serializable {
         return emf.createEntityManager();
     }
 
+    public PengelolaanDataJpaController() {
+    }
+    
+
     public void create(PengelolaanData pengelolaanData) throws IllegalOrphanException, PreexistingEntityException, Exception {
         List<String> illegalOrphanMessages = null;
         Pegawai idPegawaiOrphanCheck = pengelolaanData.getIdPegawai();
