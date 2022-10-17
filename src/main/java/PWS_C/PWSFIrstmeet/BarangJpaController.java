@@ -34,6 +34,10 @@ public class BarangJpaController implements Serializable {
         return emf.createEntityManager();
     }
 
+    public BarangJpaController() {
+    }
+    
+
     public void create(Barang barang) throws IllegalOrphanException, PreexistingEntityException, Exception {
         List<String> illegalOrphanMessages = null;
         PengelolaanData pengelolaanDataOrphanCheck = barang.getPengelolaanData();
