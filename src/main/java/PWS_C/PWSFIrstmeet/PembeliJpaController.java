@@ -34,6 +34,10 @@ public class PembeliJpaController implements Serializable {
         return emf.createEntityManager();
     }
 
+    public PembeliJpaController() {
+    }
+    
+
     public void create(Pembeli pembeli) throws PreexistingEntityException, Exception {
         EntityManager em = null;
         try {
