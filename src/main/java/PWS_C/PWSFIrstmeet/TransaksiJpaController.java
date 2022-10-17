@@ -34,6 +34,10 @@ public class TransaksiJpaController implements Serializable {
         return emf.createEntityManager();
     }
 
+    public TransaksiJpaController() {
+    }
+    
+
     public void create(Transaksi transaksi) throws IllegalOrphanException, PreexistingEntityException, Exception {
         List<String> illegalOrphanMessages = null;
         Barang kodeBarangOrphanCheck = transaksi.getKodeBarang();
